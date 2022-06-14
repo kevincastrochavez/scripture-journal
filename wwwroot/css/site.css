@@ -1,3 +1,9 @@
+:root {
+  --link-color: #0588bc;
+  --link-color-create: #439d8f;
+  --link-color-delete: #dc3545;
+}
+
 html {
   font-size: 14px;
 }
@@ -15,4 +21,174 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+h1,
+h2,
+h3,
+h4,
+label,
+th {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a,
+p,
+input,
+textarea,
+td {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+th {
+  text-transform: uppercase;
+}
+
+.table tr td:nth-child(5) {
+  width: 40%;
+}
+
+.create-btn,
+.save-btn,
+.edit-btn,
+.delete-btn {
+  color: var(--link-color-create);
+  border: 2px solid var(--link-color-create);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+}
+
+.save-btn {
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+}
+
+.delete-btn {
+  border: 2px solid var(--link-color-delete);
+  color: var(--link-color-delete);
+}
+
+.create-btn:hover,
+.save-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.create-btn:hover,
+.edit-btn:hover {
+  background-color: var(--link-color-create);
+  border: 2px solid var(--link-color-create);
+}
+
+.save-btn:hover {
+  background-color: var(--link-color);
+}
+
+.delete-btn:hover {
+  background-color: var(--link-color-delete);
+}
+
+.create-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-container p {
+  margin: 0;
+}
+
+main > form {
+  margin: 50px 0;
+}
+
+.fa-pen,
+.fa-info,
+.fa-trash {
+  width: 36px;
+  height: 36px;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.fa-pen {
+  color: var(--link-color-create);
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-pen:hover {
+  background-color: rgba(67, 157, 143, 0.3);
+}
+
+.fa-info {
+  color: var(--link-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-info:hover {
+  background-color: rgba(5, 136, 188, 0.3);
+}
+
+.fa-trash {
+  color: var(--link-color-delete);
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-trash:hover {
+  background-color: rgba(220, 53, 69, 0.3);
+}
+
+.form-group > input[type='submit'],
+.edit-btn,
+.delete-btn {
+  margin: 30px 0;
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form .form-group label {
+  text-transform: uppercase;
+}
+
+#SearchString {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 0 10px;
+  padding: 0 10px;
+  outline: none;
+}
+
+#searchInput {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#searchInput:hover {
+  color: var(--link-color);
+}
+
+#navbar,
+footer {
+  background-color: #d0ded6 !important;
 }
